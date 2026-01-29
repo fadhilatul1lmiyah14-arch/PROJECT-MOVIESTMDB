@@ -2,10 +2,9 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const images = [
-  "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba",
-  "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c",
-  "https://images.unsplash.com/photo-1524985069026-dd778a71c7b4",
-  "https://images.unsplash.com/photo-1633762018390-38f9103be554?q=80&w=1600&auto=format&fit=crop",
+  "/images/gambar1.jpg",
+  "/images/gambar2.jpg",
+  "/images/gambar3.jpg",
 ];
 
 export default function Home() {
