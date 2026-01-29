@@ -4,19 +4,21 @@ import { useEffect, useState } from "react";
 const images = [
   "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba",
   "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c",
-  // "https://images.unsplash.com/photo-1524985069026-dd778a71c7b4",
-  "https://images.unsplash.com/photo-1558980664-10fb54e6d152?auto=format&fit=crop&w=1600&q=80",
-
+  "https://images.unsplash.com/photo-1524985069026-dd778a71c7b4",
+  "https://images.unsplash.com/photo-1633762018390-38f9103be554?q=80&w=1600&auto=format&fit=crop",
 ];
 
 export default function Home() {
+  // state menyimpan gambar  // state stores the image
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
+      //mengganti gambar setiap 4 detik  // change image every 4 seconds
       setCurrent((prev) => (prev + 1) % images.length);
     }, 4000);
 
+    // komponen di-unmount // component is unmounted
     return () => clearInterval(interval);
   }, []);
 
